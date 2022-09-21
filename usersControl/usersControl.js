@@ -18,12 +18,19 @@ const users = require("../randomUsers/Users.json");
 //   },
 // ];
 
-module.exports.getAllUsers = (req, res, next) => {
+module.exports.getRandomUser = (req, res, next) => {
   const randomUser = Math.floor(Math.random() * 10) + 1;
-  let { id } = randomUser;
-  console.log(id);
-  //   console.log("random", randomUser);
   const newData = users.find((user) => user.id === Number(randomUser));
-  //   const newData = users;
   res.send(newData);
+};
+module.exports.getAllUser = (req, res, next) => {
+  const { limit, page } = req.query;
+  console.log(limit, page);
+  res.json(users.slice(0, limit));
+  // const allUsers = users;
+  // res.send(allUsers);
+};
+module.exports.saveNewUser = (req, res, next) => {
+  console.log(req.body);
+  next();
 };

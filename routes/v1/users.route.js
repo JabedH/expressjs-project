@@ -4,5 +4,7 @@ const toolsControllers = require("../../usersControl/usersControl");
 
 const router = express.Router();
 
-router.route("/").get(toolsControllers.getAllUsers);
+router.route("/random").get(toolsControllers.getRandomUser);
+router.route("/all").get(toolsControllers.getAllUser);
+router.route("/save").post(toolsControllers.saveNewUser);
 module.exports = router;

@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/v1/users", usersRouter);
+app.use("/api/v1/user", usersRouter);
 
 app.all("*", (req, res) => {
   res.send("no route found");
