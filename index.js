@@ -1,12 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const errorHandler = require("./middleware/errorHandler");
+const usersRouter = require("./routes/v1/users.route");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/v1/users", usersRouter);
+
+app.all("*", (req, res) => {
+  res.send("no route found");
+});
 
 app.use(errorHandler);
 
