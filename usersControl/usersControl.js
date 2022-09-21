@@ -19,9 +19,11 @@ const users = require("../randomUsers/Users.json");
 // ];
 
 module.exports.getAllUsers = (req, res, next) => {
-  let { id } = req.params;
+  const randomUser = Math.floor(Math.random() * 10) + 1;
+  let { id } = randomUser;
   console.log(id);
-  const newData = users.find((user) => user.id === Number(id));
+  //   console.log("random", randomUser);
+  const newData = users.find((user) => user.id === Number(randomUser));
   //   const newData = users;
   res.send(newData);
 };
