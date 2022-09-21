@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 2,
+    "gender": "male",
+    "name": "tom cruise",
+    "contact": "132368476",
+    "address": "New York, NY",
+    "photoUrl": "shorturl.at/ejnp3"
+  },
+  {
+    "id": 3,
+    "gender": "male",
+    "name": "Vladimir Putin",
+    "contact": "88002002316",
+    "address": "mosque",
+    "photoUrl": "shorturl.at/gmptx"
+  },
+  {
+    "id": 4,
+    "gender": "male",
+    "name": "joe biden",
+    "contact": "2045754965",
+    "address": "Washington, DC",
+    "photoUrl": "shorturl.at/JVZ05"
+  },
+  {
+    "id": 5,
+    "gender": "female",
+    "name": "nancy pelosi",
+    "contact": "2022254965",
+    "address": "Washington, DC",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 6,
+    "gender": "male",
+    "name": "Kim Jong-un",
+    "contact": "85023814410",
+    "address": "Pyongyang",
+    "photoUrl": "shorturl.at/besvw"
+  },
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  },
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "jabed",
+    "contact": "01789274185",
+    "address": "Dhaka",
+    "photoUrl": "shorturl.at/bnpWX"
+  }
+]
