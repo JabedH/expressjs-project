@@ -10,10 +10,10 @@
   {
     "id": 2,
     "gender": "male",
-    "name": "tom cruise",
-    "contact": "132368476",
+    "name": "donald trump",
+    "contact": "135368476",
     "address": "New York, NY",
-    "photoUrl": "shorturl.at/ejnp3"
+    "photoUrl": "shorturl.at/aLOT4"
   },
   {
     "id": 3,
@@ -48,43 +48,35 @@
     "photoUrl": "shorturl.at/besvw"
   },
   {
-    "id": 1,
+    "id": 7,
     "gender": "male",
-    "name": "jabed",
-    "contact": "01789274185",
-    "address": "Dhaka",
-    "photoUrl": "shorturl.at/bnpWX"
+    "name": "Volodymyr Zelenskyy",
+    "contact": "380442841915",
+    "address": "Kyiv",
+    "photoUrl": "shorturl.at/aKL48"
   },
   {
-    "id": 1,
+    "id": 8,
     "gender": "male",
-    "name": "jabed",
-    "contact": "01789274185",
-    "address": "Dhaka",
-    "photoUrl": "shorturl.at/bnpWX"
+    "name": "Xi Jinping",
+    "contact": "2673938682",
+    "address": "beijing",
+    "photoUrl": "shorturl.at/cdGW3"
   },
   {
-    "id": 1,
+    "id": 9,
     "gender": "male",
-    "name": "jabed",
-    "contact": "01789274185",
-    "address": "Dhaka",
-    "photoUrl": "shorturl.at/bnpWX"
+    "name": "Olaf Scholz",
+    "contact": "4901802720000",
+    "address": "Berlin",
+    "photoUrl": "shorturl.at/dekSY"
   },
   {
-    "id": 1,
+    "id": 10,
     "gender": "male",
-    "name": "jabed",
-    "contact": "01789274185",
-    "address": "Dhaka",
-    "photoUrl": "shorturl.at/bnpWX"
-  },
-  {
-    "id": 1,
-    "gender": "male",
-    "name": "jabed",
-    "contact": "01789274185",
-    "address": "Dhaka",
-    "photoUrl": "shorturl.at/bnpWX"
+    "name": "Justin Trudeau",
+    "contact": "613-992-4211",
+    "address": "Ontario",
+    "photoUrl": "shorturl.at/eopt8"
   }
 ]

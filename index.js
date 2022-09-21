@@ -9,9 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use(errorHandler);
-app.get(req, (res) => {
-  req.send("tunning");
-});
 
 app.listen(port, () => {
   console.log("server is running", port);
