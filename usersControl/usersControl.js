@@ -32,23 +32,27 @@ module.exports.getAllUser = (req, res, next) => {
 };
 
 module.exports.saveNewUser = (req, res, next) => {
-  // console.log(req.body);
-  // const singleUser = users.map((user) => console.log(user));
-  // const maxId = Math.max(users.id);
   const maxId = users.map((user) => user.id);
   const myMax = Math.max(...maxId) + 1;
-  console.log(myMax);
-
-  const newUserId = { id: myMax };
-  const newInfo = req.body;
-  users.push(req.body);
-  users.push(req.body, req.body.newUserId);
-  res.send(users);
+  req.body.id = myMax;
+  if (
+    req.body.name &&
+    req.body.gender &&
+    req.body.contact &&
+    req.body.address &&
+    req.body.photoUrl
+  ) {
+    users.push(req.body);
+    res.send(users);
+  } else {
+    next();
+  }
 };
 
 module.exports.updateUser = (req, res, next) => {
   let { id } = req.body;
   const updateUser = users.find((user) => user.id === Number(id));
+  console.log(updateUser);
 
   {
     req.body.name !== undefined ? (updateUser.name = req.body.name) : "";
@@ -72,5 +76,28 @@ module.exports.updateUser = (req, res, next) => {
       : "";
   }
   console.log(updateUser);
-  req.send(updateUser);
+  res.send(updateUser);
+};
+
+
+module.exports.bulkUpdate = (req, res, next) => {
+  let userIds = req.body;
+  const updateUsers = userIds.map((userId) => console.log(userId.id));
+  const updateUser = users.find((user) => user.id === Number(updateUsers.id));
+  // const newUpdate = updateUsers.map((updateUser) => {
+  //   {
+  //     req.body.name !== undefined ? (updateUser.name = req.body.name) : "";
+  //   }
+  // });
+  // {
+  //   req.body.name !== undefined ? (updateUser.name = req.body.name) : "";
+  // }
+  console.log(updateUsers.id);
+  res.send(newUpdate);
+};
+module.exports.deleteUser = (req, res) => {
+  let { id } = req.params;
+  let filter = { _id: id };
+  const newUsers = users.filter((user) => user.id !== Number(id));
+  res.send(newUsers);
 };
