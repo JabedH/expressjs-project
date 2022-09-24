@@ -9,7 +9,6 @@ module.exports.getAllUser = (req, res, next) => {
   const { limit, page } = req.query;
   console.log(limit, page);
   res.json(users.slice(0, limit));
-  
 };
 
 module.exports.saveNewUser = (req, res, next) => {
@@ -24,7 +23,15 @@ module.exports.saveNewUser = (req, res, next) => {
     req.body.photoUrl
   ) {
     users.push(req.body);
-    res.send(users);
+    res.status(200).send({
+      success: true,
+      message: "Success",
+      data: users,
+    });
+    res.status(500).send({
+      success: false,
+      message: "Internal server error",
+    });
   } else {
     next();
   }
@@ -57,8 +64,15 @@ module.exports.updateUser = (req, res, next) => {
       ? (updateUser.photoUrl = req.body.photoUrl)
       : "";
   }
-  console.log(updateUser);
-  res.send(updateUser);
+  res.status(200).send({
+    success: true,
+    message: "Success",
+    data: updateUser,
+  });
+  res.status(500).send({
+    success: false,
+    message: "Internal server error",
+  });
 };
 
 module.exports.bulkUpdate = (req, res, next) => {
@@ -68,7 +82,7 @@ module.exports.bulkUpdate = (req, res, next) => {
   });
 
   const updateUser = users.find(
-    (user) => user.id === bulkUser.forEach((eachData) => eachData)
+    (user) => user.id === bulkUser.forEach((eachId) => eachId)
   );
   {
     req.body.name !== undefined ? (updateUser.name = req.body.name) : "";
@@ -91,12 +105,28 @@ module.exports.bulkUpdate = (req, res, next) => {
       ? (updateUser.photoUrl = req.body.photoUrl)
       : "";
   }
-  res.send(updateUser);
+  res.status(200).send({
+    success: true,
+    message: "Success",
+    data: updateUser,
+  });
+  res.status(500).send({
+    success: false,
+    message: "Internal server error",
+  });
 };
 
 module.exports.deleteUser = (req, res) => {
   let { id } = req.params;
   let filter = { _id: id };
   const newUsers = users.filter((user) => user.id !== Number(id));
-  res.send(newUsers);
+  res.status(200).send({
+    success: true,
+    message: "Success fully deleted",
+    data: newUsers,
+  });
+  res.status(500).send({
+    success: false,
+    message: "Internal server error",
+  });
 };
